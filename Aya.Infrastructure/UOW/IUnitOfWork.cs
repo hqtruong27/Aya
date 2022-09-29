@@ -1,14 +1,17 @@
 ﻿using Aya.Infrastructure.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aya.Infrastructure.UOW
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
+        Task CreateTransactionAsync();
+
+        Task CommitAsync();
+
+        Task RollbackAsync();
+
+        Task<int> SaveChangeAsync();
+
         ICategoryRepository Categories { get; }
     }
 }

@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Aya.Bussiness\Aya.Bussiness.csproj" />
+    <ProjectReference Include="..\Aya.Common\Aya.Common.csproj" />
     <ProjectReference Include="..\Aya.Services\Aya.Services.csproj" />
   </ItemGroup>
 
